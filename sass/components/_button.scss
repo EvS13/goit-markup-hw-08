@@ -1,0 +1,29 @@
+.button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: 1px solid transparent;
+  min-width: 200px;
+
+  color: $button-color;
+  background-color: $accent-color;
+  cursor: pointer;
+
+  &.primary {
+    color: $button-color;
+    background-color: $accent-color;
+    transition: color 250ms $timing-function;
+  }
+
+  &.primary:hover,
+  &.primary:focus {
+    color: $footer-br-color;
+  }
+}

@@ -1,0 +1,57 @@
+.clients {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.clients-title {
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+
+  color: $title-text-color;
+}
+
+.clients-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  transition: 250ms $timing-function;
+}
+
+.clients-list {
+  margin-right: 30px;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  fill: #afb1b8;
+  width: 170px;
+  height: 90px;
+  border: 1px solid rgba(175, 177, 184, 1);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  transition: border-color 250ms $timing-function, 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
+
+  &:hover .clients-icon,
+  &:focus .clients-icon {
+    fill: $accent-color;
+  }
+}
