@@ -292,9 +292,9 @@ img {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
+  width: 1200px;
 }
 
 .header {
@@ -487,6 +487,8 @@ img {
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  margin-right: 0;
+  margin-left: 0;
   width: 270px;
   height: 120px;
   background: #f5f4fa;
@@ -494,6 +496,8 @@ img {
 }
 
 .feature-title {
+  display: flex;
+  justify-content: center;
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 10px;
