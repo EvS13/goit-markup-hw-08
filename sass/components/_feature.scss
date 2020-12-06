@@ -1,17 +1,36 @@
 .feature {
   padding-top: 94px;
   padding-bottom: 94px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-field {
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 1199px) {
+    :nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  display: flex;
 }
 
 .feature-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 30px;
   margin-right: 0;
   margin-left: 0;
 
-  width: 270px;
+  padding: 25px 100px 25px 100px;
+  width: 100%;
   height: 120px;
 
   background: #f5f4fa;
@@ -19,7 +38,6 @@
 }
 
 .feature-title {
-  display: flex;
   justify-content: center;
   text-transform: uppercase;
   margin-top: 0;
@@ -34,32 +52,51 @@
 }
 
 .feature-text {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
   color: $primary-text-color;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    text-align: left;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc(100% - 2 * 30px);
+    text-align: left;
+  }
 }
 
-// .feature-field {
-//   padding: 0;
-//   margin: 0;
-// }
+.list-item {
+  text-align: center;
 
-// .list-item {
-//   align-items: center;
-// }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+}
 
-// .feature-field .list-item {
-//   margin-bottom: 30px;
-// }
+@media screen and (max-width: 767px) {
+  .list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 
-// .feature-item {
-//   padding: 25px 100px 25px 100px;
-//   width: 100%;
-//   height: 120px;
-//   margin-bottom: 30px;
-//   background-color: #f5f4fa;
-// }
+@media screen and (min-width: 768px) {
+  .list-item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .list-item {
+    width: calc((100% - 4 * 30px) / 4);
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+}
