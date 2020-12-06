@@ -503,8 +503,6 @@ h6 {
 .feature {
   padding-top: 94px;
   padding-bottom: 94px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .feature-field {
@@ -603,8 +601,13 @@ h6 {
 @media screen and (min-width: 1200px) {
   .list-item {
     width: calc((100% - 4 * 30px) / 4);
-    margin-right: 30px;
     margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .list-item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 
