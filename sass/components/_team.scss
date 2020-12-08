@@ -1,16 +1,16 @@
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $secondary-br-color;
 }
 
-.team-item {
-  width: 270px;
+.team-main {
+  padding: 0;
 
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-  background-color: $button-color;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .team-title {
@@ -38,24 +38,75 @@
   padding-bottom: 16px;
 }
 
-.list .team-list + .team-list {
-  margin-left: 30px;
-}
-
-.team-content {
+.team-title,
+.team-text {
   text-align: center;
 
-  width: 270px;
   background-color: #fff;
 }
 
 .team-nav-title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: $title-text-color;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.team-list {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: $button-color;
+
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 2 * 30px) / 2);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  &:nth-child(2n) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-right: 0;
+    }
+  }
+
+  &:nth-last-child(-n + 2) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 4 * 30px) / 4);
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    @media screen and (min-width: 1200px) {
+      margin-right: 0;
+    }
+  }
 }
