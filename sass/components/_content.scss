@@ -5,11 +5,28 @@
 
 .project-list {
   display: flex;
-  justify-content: center;
-  height: 54px;
+  flex-wrap: wrap;
+  height: 91px;
 
-  .project-btn + .project-btn {
-    margin-left: 8px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    height: 54px;
+  }
+}
+.project-btn {
+  @media screen and (min-width: 480px) {
+    margin-right: 8px;
+  }
+}
+
+// .project-btn + .project-btn {
+//   margin-left: 8px;
+// }
+
+.project-btn:nth-last-child(3n) {
+  @media screen and (min-width: 480px) {
+    margin-left: 0;
   }
 }
 
