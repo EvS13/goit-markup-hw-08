@@ -22,14 +22,19 @@
 }
 
 .footer-container {
-  display: flex;
   align-items: baseline;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .thumb-footer {
     display: flex;
     align-items: baseline;
+    justify-content: space-around;
+    // width: 50%;
   }
 }
 
@@ -157,9 +162,19 @@
 }
 
 .footer-field {
-  display: flex;
-  text-align: center;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    justify-content: center;
+    // flex-direction: column;
+  }
 }
+
+// .icon-subscribe {
+//   @media screen and (min-width: 768px) {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
 
 .input-subscribe {
   width: 100%;

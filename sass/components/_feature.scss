@@ -1,6 +1,11 @@
 .feature {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .feature-field {
@@ -28,7 +33,7 @@
 }
 
 .feature-title {
-  justify-content: center;
+  text-align: center;
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 10px;
@@ -39,17 +44,22 @@
   letter-spacing: 0.03em;
 
   color: $title-text-color;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 
 .feature-text {
+  text-align: left;
+  margin: 0;
   color: $primary-text-color;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  text-align: left;
-  margin: 0;
+  width: 100%;
 }
 
 .list-item {

@@ -1,7 +1,12 @@
 .team {
   padding-top: 60px;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
   background-color: $secondary-br-color;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team-main {
@@ -65,6 +70,12 @@
   margin-bottom: 30px;
   width: 100%;
   height: auto;
+
+  &:last-child {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 0;
+    }
+  }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: calc((100% - 3 * 30px) / 2);
