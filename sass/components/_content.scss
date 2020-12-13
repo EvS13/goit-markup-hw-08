@@ -289,18 +289,11 @@
   margin: 0;
   padding: 77px 24px;
   width: 450px;
-  // height: 294px;
   font-family: $primary-font;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.86;
   letter-spacing: 0.03em;
-
-  // @media screen and (max-width: 480px) {
-  //   padding-top: 77px 24px;
-  //   width: 450px;
-  //   line-height: 1.86;
-  // }
 
   @media screen and (min-width: 768px) {
     padding: 49px 24px;
