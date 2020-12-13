@@ -11,16 +11,31 @@
 }
 
 .project-list {
-  display: flex;
-  justify-content: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
 
-  .project-btn + .project-btn {
-    margin-left: 8px;
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 
-    @media screen and (min-width: 480px) {
-      display: flex;
-      flex-wrap: wrap;
-    }
+.project-btn {
+  @media screen and (min-width: 768px) {
+    margin-right: 8px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-right: 8px;
+    margin-bottom: 15px;
+  }
+}
+
+.project-btn:last-child {
+  @media screen and (min-width: 768px) {
+    margin-right: 0;
   }
 }
 

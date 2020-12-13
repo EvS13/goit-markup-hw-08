@@ -26,6 +26,11 @@
     background: $secondary-br-color;
   }
 
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &:hover,
   &:focus {
     color: $button-color;

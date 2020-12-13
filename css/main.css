@@ -348,6 +348,7 @@ img {
     justify-content: space-between;
     justify-content: center;
     flex-direction: column;
+    z-index: 99;
   }
   .header-nav.is-open {
     display: block;
@@ -596,6 +597,12 @@ img {
   background-color: transparent;
 }
 
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
 .menu-btn .icon-close {
   display: none;
 }
@@ -606,6 +613,11 @@ img {
 
 .menu-btn.is-open .icon-menu {
   display: none;
+}
+
+.menu-btn:hover,
+.menu-btn:focus {
+  fill: #2196f3;
 }
 
 .hero {
@@ -697,7 +709,7 @@ img {
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .button {
     display: flex;
     flex-wrap: wrap;
@@ -705,6 +717,8 @@ img {
 }
 
 .button.primary {
+  display: inline-block;
+  justify-content: center;
   color: #ffffff;
   background-color: #2196f3;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -742,6 +756,13 @@ img {
   background: #f5f4fa;
 }
 
+@media screen and (min-width: 480px) {
+  .button {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .button:hover, .button:focus {
   color: #ffffff;
   background-color: #2196f3;
@@ -766,19 +787,36 @@ img {
   }
 }
 
-.project-list {
-  display: flex;
-  justify-content: center;
-}
-
-.project-list .project-btn + .project-btn {
-  margin-left: 8px;
+@media screen and (min-width: 768px) {
+  .project-list {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 480px) {
-  .project-list .project-btn + .project-btn {
+  .project-list {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project-btn {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .project-btn {
+    margin-right: 8px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project-btn:last-child {
+    margin-right: 0;
   }
 }
 
