@@ -19,6 +19,8 @@
   background-color: $primary-br-color;
 
   @media screen and (max-width: 767px) {
+    display: none;
+
     position: absolute;
     background-color: #fff;
     width: 100%;
@@ -27,6 +29,10 @@
     justify-content: space-between;
     justify-content: center;
     flex-direction: column;
+
+    &.is-open {
+      display: block;
+    }
   }
 
   @media screen and (max-width: 767px) {
@@ -120,12 +126,6 @@
   text-decoration: none;
 
   transition: 250ms $timing-function;
-
-  // @media screen and (min-width: 768px) {
-  //   font-size: 14px;
-  //   padding-top: 32px;
-  //   padding-bottom: 32px;
-  // }
 }
 
 .header-link:hover,
@@ -251,4 +251,24 @@
   &:focus .header-icon {
     fill: $accent-color;
   }
+}
+
+.menu-btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-btn .icon-close {
+  display: none;
+}
+
+.menu-btn.is-open .icon-close {
+  display: block;
+}
+
+.menu-btn.is-open .icon-menu {
+  display: none;
 }

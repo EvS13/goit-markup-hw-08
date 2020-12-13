@@ -10,11 +10,15 @@
   border-radius: 4px;
   padding: 10px 32px;
   border: 1px solid transparent;
-  min-width: 200px;
 
   color: $button-color;
   background-color: $accent-color;
   cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   &.primary {
     color: $button-color;

@@ -339,6 +339,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .header-nav {
+    display: none;
     position: absolute;
     background-color: #fff;
     width: 100%;
@@ -347,6 +348,9 @@ img {
     justify-content: space-between;
     justify-content: center;
     flex-direction: column;
+  }
+  .header-nav.is-open {
+    display: block;
   }
 }
 
@@ -584,22 +588,66 @@ img {
   fill: #2196f3;
 }
 
+.menu-btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-btn .icon-close {
+  display: none;
+}
+
+.menu-btn.is-open .icon-close {
+  display: block;
+}
+
+.menu-btn.is-open .icon-menu {
+  display: none;
+}
+
 .hero {
-  display: flex;
-  flex-wrap: wrap;
+  width: 100%;
   text-align: center;
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: #2f303a;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header-img-1.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/hero/mobile-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/hero/mobile-hero@2.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/hero/tablet-hero.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/hero/tablet-hero@2x.jpg");
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero/desktop-hero.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero/desktop-hero@2x.jpg");
   }
 }
 
@@ -625,6 +673,14 @@ img {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .hero .title {
+    font-size: 26px;
+    line-height: 1.61;
+    max-width: 360px;
+  }
+}
+
 .button {
   display: inline-block;
   text-decoration: none;
@@ -636,10 +692,16 @@ img {
   border-radius: 4px;
   padding: 10px 32px;
   border: 1px solid transparent;
-  min-width: 200px;
   color: #ffffff;
   background-color: #2196f3;
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .button.primary {
@@ -665,6 +727,15 @@ img {
 }
 
 .button.secondary {
+  color: #212121;
+  background-color: #2196f3;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 6px 22px;
   border-radius: 4px;
   border-color: transparent;
@@ -696,12 +767,19 @@ img {
 }
 
 .project-list {
+  display: flex;
   justify-content: center;
-  height: 54px;
 }
 
 .project-list .project-btn + .project-btn {
   margin-left: 8px;
+}
+
+@media screen and (min-width: 480px) {
+  .project-list .project-btn + .project-btn {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .content {
@@ -744,8 +822,12 @@ img {
 }
 
 @media screen and (min-width: 480px) {
-  .content-img {
-    width: 450px;
+  .content-img .content-img:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  .content-img:hover .projects {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
