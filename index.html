@@ -18,11 +18,18 @@
     <header class="header">
         <div class="container header-main">
             <a href="./index.html" class="header-logo"><span class="header-web">Web</span>Studio</a>
+            <button type="button">
+                <svg width="40" height="40">
+                    <use href="./images/sprite.svg#icon-menu_40px"></use>
+                    <use href="./images/sprite.svg#icon-close_40px"></use>
+                </svg>
+            </button>
             <nav class="header-nav">
                 <ul class="site-nav list">
                     <li class="item"><a href="./index.html" class="header-link current">Студия</a></li>
                     <li class="item"><a href="./portfolio.html" class="header-link">Портфолио</a></li>
                     <li class="item"><a href="#address" class="header-link">Контакты</a></li>
+
                 </ul>
                 <ul class="header-item list">
                     <li class="item">
@@ -103,18 +110,25 @@
                 <h2 class="work-title">Чем мы занимаемся</h2>
                 <ul class="work-item list">
                     <li class="work-list">
+                        <picture>
+                            <source srcset="./images/desktop/work/1.jpg 1x, ./images/desktop/work/1@2x.jpg 2x"
+                                media="min-width: 1200px)" />
                         <img src="./images/img-4.jpg" class="link" alt="человек печатает на клавиатуре" width="370"
-                            height="294">
+                            height="294"></picture>
                         <p class="work-label">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
                     </li>
                     <li class="work-list">
+                        <picture>
+                            <source srcset="./images/desktop/work/2.jpg 1x, ./images/desktop/work/2@2x.jpg 2x" media="min-width: 1200px)" />
                         <img src="./images/img-5.jpg" class="link"
-                            alt="человек держит телефон в руках и смотрит на монитор" width="370" height="294">
+                            alt="человек держит телефон в руках и смотрит на монитор" width="370" height="294"></picture>
                         <p class="work-label">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
                     </li>
                     <li class="work-list">
+                        <picture>
+                            <source srcset="./images/desktop/work/3.jpg 1x, ./images/desktop/work/3@2x.jpg 2x" media="min-width: 1200px)" />
                         <img src="./images/img-6.jpg" class="link" alt="человек держит в руках планшет" width="370"
-                            height="294">
+                            height="294"></picture>
                         <p class="work-label">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
                     </li>
                 </ul>
@@ -127,7 +141,13 @@
                 <h2 class="team-nav-title">Наша команда</h2>
                 <ul class="team-main list">
                     <li class="team-list">
-                        <img src="./images/igor.jpg" class="link" alt="мужчина в очках улыбается">
+                        <picture>
+                            <source srcset="./images/mobile/team/mobile-photo-1.jpg 1x, ./images/mobile/team/mobile-photo-1@2x.jpg 2x" media="(max-width: 767px)"/>
+                            <source srcset="./images/tablet/team/tablet-photo-1.jpg 1x, ./images/tablet/team/tablet-photo-1@2x.jpg 2x"
+                                media="(min-width: 768px)"/>
+                            <source srcset="./images/desktop/team/desktop-photo-1.jpg 1x, ./images/desktop/team/desktop-photo-1@2x.jpg 2x"
+                                media="(min-width: 1200px)" />
+                        <img src="./images/igor.jpg" class="link" alt="мужчина в очках улыбается" width="450"></picture>
                         <h3 class="team-title">Игорь Демьяненко</h3>
                         <p class="team-text">Product Designer</p>
                         <ul class="social-item list">
@@ -166,7 +186,14 @@
                         </ul>
                     </li>
                     <li class="team-list">
-                        <img src="./images/olga.jpg" class="link" alt="женщина в очках улыбается">
+                        <picture>
+                            <source srcset="./images/mobile/team/mobile-photo-2.jpg 1x, ./images/mobile/team/mobile-photo-2@2x.jpg 2x"
+                                media="(max-width: 767px)" />
+                            <source srcset="./images/tablet/team/tablet-photo-2.jpg 1x, ./images/tablet/team/tablet-photo-2@2x.jpg 2x"
+                                media="(min-width: 768px)" />
+                            <source srcset="./images/desktop/team/desktop-photo-2.jpg 1x, ./images/desktop/team/desktop-photo-2@2x.jpg 2x"
+                                media="(min-width: 1200px)" />
+                        <img src="./images/olga.jpg" class="link" alt="женщина в очках улыбается" width="450"></picture>
                         <h3 class="team-title">Ольга Репина</h3>
                         <p class="team-text">Frontend Developer</p>
                         <ul class="social-item list">
@@ -205,7 +232,14 @@
                         </ul>
                     </li>
                     <li class="team-list">
-                        <img src="./images/nikolai.jpg" class="link" alt="мужчина смотрит в сторону">
+                        <picture>
+                            <source srcset="./images/mobile/team/mobile-photo-3.jpg 1x, ./images/mobile/team/mobile-photo-3@2x.jpg 2x"
+                                media="(max-width: 767px)" />
+                            <source srcset="./images/tablet/team/tablet-photo-3.jpg 1x, ./images/tablet/team/tablet-photo-3@2x.jpg 2x"
+                                media="(min-width: 768px)" />
+                            <source srcset="./images/desktop/team/desktop-photo-3.jpg 1x, ./images/desktop/team/desktop-photo-3@2x.jpg 2x"
+                                media="(min-width: 1200px)" />
+                        <img src="./images/nikolai.jpg" class="link" alt="мужчина смотрит в сторону" width="450"></picture>
                         <h3 class="team-title">Николай Тарасов</h3>
                         <p class="team-text">Marketing</p>
                         <ul class="social-item list">
@@ -244,7 +278,14 @@
                         </ul>
                     </li>
                     <li class="team-list">
-                        <img src="./images/mihail.jpg" class="link" alt="мужчина в очках улыбается">
+                        <picture>
+                            <source srcset="./images/mobile/team/mobile-photo-4.jpg 1x, ./images/mobile/team/mobile-photo-4@2x.jpg 2x"
+                                media="(max-width: 767px)" />
+                            <source srcset="./images/tablet/team/tablet-photo-4.jpg 1x, ./images/tablet/team/tablet-photo-4@2x.jpg 2x"
+                                media="(min-width: 768px)" />
+                            <source srcset="./images/desktop/team/desktop-photo-4.jpg 1x, ./images/desktop/team/desktop-photo-4@2x.jpg 2x"
+                                media="(min-width: 1200px)" />
+                        <img src="./images/mihail.jpg" class="link" alt="мужчина в очках улыбается" width="450"></picture>>
                         <h3 class="team-title">Михаил Ермаков</h3>
                         <p class="team-text">UI Designer</p>
                         <ul class="social-item list">
@@ -351,7 +392,7 @@
                         г. Киев, пр-т Леси Украинки, 26 <br>
                         <ul class="footer-navi list">
                             <li class="footer-mail">
-                                <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
+                                <a href="mailto:info@example.com" class="link">info@devstudio.com</a>
                             </li>
                             <li class="footer-tel">
                                 <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
