@@ -317,6 +317,7 @@ img {
 }
 
 .header {
+  border: 1px solid #ececec;
   background-color: #ffffff;
   color: #212121;
   position: relative;
@@ -324,6 +325,15 @@ img {
 
 @media screen and (min-width: 768px) {
   .header {
+    border: 1px solid #eeeeee;
+    background-color: #ffffff;
+    color: #212121;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .header {
+    height: 60px;
     border: 1px solid #eeeeee;
     background-color: #ffffff;
     color: #212121;
@@ -345,6 +355,7 @@ img {
     width: 100%;
     top: 100%;
     left: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
     justify-content: space-between;
     justify-content: center;
     flex-direction: column;
@@ -787,17 +798,15 @@ img {
   }
 }
 
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @media screen and (min-width: 768px) {
   .project-list {
     display: flex;
     justify-content: center;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .project-list {
-    display: flex;
-    flex-wrap: wrap;
   }
 }
 
@@ -857,28 +866,6 @@ img {
 .content-img:hover .projects {
   opacity: 1;
   transform: translateY(0);
-}
-
-@media screen and (min-width: 480px) {
-  .content-img .content-img:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  }
-  .content-img:hover .projects {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .content-img {
-    width: 354px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .content-img {
-    width: 370px;
-  }
 }
 
 .content-list {
@@ -1822,6 +1809,7 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 150;
   background-color: #ffffff;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
